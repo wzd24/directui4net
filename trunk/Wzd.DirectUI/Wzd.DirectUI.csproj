@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,16 +34,106 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ControlBase.cs" />
     <Compile Include="Forms\Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Native\InnerWin32.cs" />
     <Compile Include="Native\NativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\BitmapToRegion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderBottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderBottom2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderLeft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderLeft2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderLeftBottom2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderLeftTop2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderRight2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderRightBottom2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderRightTop2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderTop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderTop2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMBorderTop20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMCloseButton_Down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMCloseButton_Hover.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMCloseButton_Normal.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMMaxButton_Down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMMaxButton_Hover.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMMaxButton_Normal.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMMinButton_Down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMMinButton_Hover.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMMinButton_Normal.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMRestoreButton_Down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMRestoreButton_Hover.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMRestoreButton_Normal.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
