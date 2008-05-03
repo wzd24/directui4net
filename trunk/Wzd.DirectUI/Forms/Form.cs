@@ -20,9 +20,8 @@ namespace Wzd.DirectUI.Forms
         private Bitmap _backbuffer_bitmap;
 
         ButtonStatus closeStatus, MinStatus, MaxStatus;
-        [Browsable(false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public Bitmap BackBufferBitmap
+
+        protected Bitmap BackBufferBitmap
         {
             get
             {
@@ -38,9 +37,7 @@ namespace Wzd.DirectUI.Forms
             }
         }
 
-        [Browsable(false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public Rectangle ContentRectangle
+        protected Rectangle ContentRectangle
         {
             get { return new Rectangle(0, 0, Width - bWidth * 2, Height - bHeight * 2); }
         }
@@ -250,17 +247,14 @@ namespace Wzd.DirectUI.Forms
                 bWidth = NativeMethods.GetSystemMetrics(32);
                 bHeight = NativeMethods.GetSystemMetrics(33);
             }
-            this.Padding = new Padding(3 + bWidth, 24 + bHeight, 3 + bWidth, 3 + bHeight);
             this.BackBufferBitmap = new Bitmap(base.Width - bWidth, base.Height - bHeight, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
             Graphics g = Graphics.FromImage(this.BackBufferBitmap);
             DrawBackGround(g);
             this.WndRegion = BitmapToRegion.Convert(this.BackBufferBitmap, Color.FromArgb(255, 0, 255), TransparencyMode.ColorKeyTransparent, 0, 0);
-            base.Invalidate(true);
+            base.Invalidate();
         }
 
-        [Browsable(false)]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public Region WndRegion
+        protected Region WndRegion
         {
             get
             {
