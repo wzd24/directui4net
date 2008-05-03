@@ -29,38 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Drawing.Region region1 = new System.Drawing.Region();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(227, 731);
-            this.panel1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackBufferBitmap = ((System.Drawing.Bitmap)(resources.GetObject("$this.BackBufferBitmap")));
-            this.ClientSize = new System.Drawing.Size(233, 758);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(212, 372);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.Text = "中华人民共和国";
             this.TopMost = true;
-            this.WndRegion = region1;
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
 
 
 
